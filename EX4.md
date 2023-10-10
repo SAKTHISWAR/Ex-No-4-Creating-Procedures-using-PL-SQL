@@ -42,6 +42,8 @@ Begin
 
 ```
 ### Output:
-![image]()
+![image](https://github.com/SAKTHISWAR/Ex-No-4-Creating-Procedures-using-PL-SQL/blob/main/ou1.jpeg)
 
 ### Result:
+Thus the program to create a procedure using sql has been succesfully verified.
+
