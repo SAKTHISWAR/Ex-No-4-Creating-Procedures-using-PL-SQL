@@ -11,7 +11,37 @@
 6. Display the employee table
 
 ### Program:
+```python
 
+
+CREATE TABLE s4(
+     empid NUMBER,
+     empname VARCHAR(10),
+     dept VARCHAR(10),
+     salary NUMBER
+    );
+CREATE OR REPLACE PROCEDURE s4_data AS
+    BEGIN
+    INSERT INTO s4(empid,empname,dept,salary)
+    values(1,'mukesh','CEO',10000000);
+    INSERT INTO s4(empid,empname,dept,salary)
+    values(2,'sree ram','HR',500000);
+    INSERT INTO s4(empid,empname,dept,salary)
+    values(3,'mukil','MD',200000);
+    COMMIT;
+   FOR s4_rec IN (SELECT * FROM s4)LOOP
+   DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||s4_rec.empid||',EMPLOYEE NAME:'|| s4_rec.empname||
+   ',DEPARTMENT:'||s4_rec.dept||',SALARY:'||s4_rec.salary);
+   END LOOP;
+   END;
+  /
+Begin
+    s4_data; end;
+    /
+
+
+```
 ### Output:
+![image]()
 
 ### Result:
